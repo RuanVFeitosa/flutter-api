@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 
 class CardProduto extends StatelessWidget {
   final ProdutoModel produto;
-  const CardProduto({
+  const CardProduto(
+ {
     super.key,
     required this.produto,
   });
@@ -12,7 +13,7 @@ class CardProduto extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 150,
+
       //height: 180,
       margin: const EdgeInsets.all(6.0),
       decoration: BoxDecoration(
@@ -24,7 +25,7 @@ class CardProduto extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const SizedBox(
-            height: 20,
+            height: 10,
           ),
           Image.asset(
             produto.imagem,
@@ -35,7 +36,7 @@ class CardProduto extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 6),
             child: Text(
               produto.titulo,
-              style: TextStyle(
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 12,
               ),
